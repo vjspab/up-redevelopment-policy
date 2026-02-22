@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Building2, Trees, TrendingUp, Calculator, 
+import {
+  Building2, Trees, TrendingUp, Calculator,
   FileText, ShieldCheck, ChevronDown, ChevronRight,
   Info, ArrowRight, Briefcase, Landmark, Printer, Download,
   Clock, Home, Percent, FileSignature, CheckCircle2, Users, HardHat, FileSpreadsheet
@@ -51,11 +51,10 @@ export default function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  activeTab === tab.id 
-                    ? 'bg-blue-600 text-white shadow-md transform scale-105' 
-                    : 'text-slate-300 hover:bg-slate-700 hover:text-white'
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${activeTab === tab.id
+                  ? 'bg-blue-600 text-white shadow-md transform scale-105'
+                  : 'text-slate-300 hover:bg-slate-700 hover:text-white'
+                  }`}
               >
                 {tab.label}
               </button>
@@ -88,7 +87,7 @@ function InsightsTab() {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between overflow-hidden relative text-white border border-blue-800">
         <div className="md:w-3/5 z-10">
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Revitalizing Urban <br/><span className="text-blue-400">Uttar Pradesh</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Revitalizing Urban <br /><span className="text-blue-400">Uttar Pradesh</span></h2>
           <p className="text-blue-100 mb-8 leading-relaxed text-lg font-medium pr-4">
             The UP Urban Redevelopment Policy 2026 transforms aging, unsafe buildings into vibrant, modern communities. It offers unmatched financial incentives, free extra FAR, and a streamlined single-window clearance to solve urban decay.
           </p>
@@ -111,10 +110,10 @@ function InsightsTab() {
       {/* Key Facts Grid - Expanded to 8 Items */}
       <div>
         <div className="flex items-center space-x-3 mb-6">
-          <div className="p-2 bg-blue-100 rounded-xl"><Info className="w-6 h-6 text-blue-700"/></div>
+          <div className="p-2 bg-blue-100 rounded-xl"><Info className="w-6 h-6 text-blue-700" /></div>
           <h3 className="text-2xl font-black text-slate-800 tracking-tight">At a Glance: Key Figures</h3>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {insights.map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center space-x-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
@@ -136,7 +135,7 @@ function InsightsTab() {
         <div className="relative">
           {/* Connecting Line */}
           <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0"></div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
             {timelineSteps.map((item, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
@@ -156,25 +155,25 @@ function InsightsTab() {
 
       {/* Infographics: Financials & Stakeholders */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        
+
         {/* Financial Perks */}
         <div className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl relative overflow-hidden border border-slate-800">
-           <h3 className="text-2xl font-black mb-8 flex items-center relative z-10 tracking-tight">
-             <Landmark className="w-6 h-6 mr-3 text-emerald-400" />
-             Financial Exemptions & Aids
-           </h3>
-           <div className="space-y-8 relative z-10">
-              <ProgressBar label="Development Charge Waived" percentage={50} color="bg-emerald-400" />
-              <ProgressBar label="Land Use Change Fee Waived" percentage={25} color="bg-blue-400" />
-              <ProgressBar label="Stamp Duty (Original Allottees)" percentage={100} color="bg-indigo-400" />
-              <ProgressBar label="EWS/LIG Construction Mandatory Quota" percentage={100} color="bg-purple-400" />
-              
-              <div className="mt-6 p-4 bg-slate-800/50 rounded-xl border border-slate-700 backdrop-blur-sm">
-                <p className="text-sm text-slate-300"><strong className="text-white">Note:</strong> Amalgamation of multiple contiguous plots is fully permitted with <span className="text-emerald-400 font-bold">ZERO amalgamation fee</span>.</p>
-              </div>
-           </div>
-           {/* Decorative Icon */}
-           <TrendingUp className="absolute -bottom-10 -right-10 w-64 h-64 text-slate-800 opacity-50 z-0 pointer-events-none" />
+          <h3 className="text-2xl font-black mb-8 flex items-center relative z-10 tracking-tight">
+            <Landmark className="w-6 h-6 mr-3 text-emerald-400" />
+            Financial Exemptions & Aids
+          </h3>
+          <div className="space-y-8 relative z-10">
+            <ProgressBar label="Development Charge Waived" percentage={50} color="bg-emerald-400" />
+            <ProgressBar label="Land Use Change Fee Waived" percentage={25} color="bg-blue-400" />
+            <ProgressBar label="Stamp Duty (Original Allottees)" percentage={100} color="bg-indigo-400" />
+            <ProgressBar label="EWS/LIG Construction Mandatory Quota" percentage={100} color="bg-purple-400" />
+
+            <div className="mt-6 p-4 bg-slate-800/50 rounded-xl border border-slate-700 backdrop-blur-sm">
+              <p className="text-sm text-slate-300"><strong className="text-white">Note:</strong> Amalgamation of multiple contiguous plots is fully permitted with <span className="text-emerald-400 font-bold">ZERO amalgamation fee</span>.</p>
+            </div>
+          </div>
+          {/* Decorative Icon */}
+          <TrendingUp className="absolute -bottom-10 -right-10 w-64 h-64 text-slate-800 opacity-50 z-0 pointer-events-none" />
         </div>
 
         {/* Stakeholder Roles */}
@@ -184,22 +183,22 @@ function InsightsTab() {
             Who Does What?
           </h3>
           <div className="space-y-4">
-            <RoleCard 
-              title="Housing Society / AOA" 
+            <RoleCard
+              title="Housing Society / AOA"
               role="The Initiator"
               items={["Pass resolution with 66% majority", "Appoint Project Management Consultant (PMC)", "Select Developer & sign tripartite agreement", "Monitor compliance & safeguard members"]}
               color="bg-blue-50 border-blue-100 text-blue-900"
               icon={<Users className="w-5 h-5 text-blue-600" />}
             />
-            <RoleCard 
-              title="Implementing Agency (Developer)" 
+            <RoleCard
+              title="Implementing Agency (Developer)"
               role="The Builder"
               items={["Provide 100% free transit housing or rent", "Obtain all legal & RERA approvals", "Complete construction within 3 years", "Guarantee structural stability for 2 years post-build"]}
               color="bg-indigo-50 border-indigo-100 text-indigo-900"
               icon={<HardHat className="w-5 h-5 text-indigo-600" />}
             />
-            <RoleCard 
-              title="Government Agency" 
+            <RoleCard
+              title="Government Agency"
               role="The Facilitator"
               items={["Provide Single-Window Clearance", "Grant Free +1.0 FAR and fee waivers", "Monitor timelines and resolve disputes", "Ensure policy compliance via 'Awas Bandhu'"]}
               color="bg-emerald-50 border-emerald-100 text-emerald-900"
@@ -216,7 +215,7 @@ function InsightsTab() {
 function SimulatorTab() {
   const [plotArea, setPlotArea] = useState(2000);
   const [baseFar, setBaseFar] = useState(1.5);
-  
+
   // Calculations based on policy
   const bonusFar = 1.0; // Free FAR incentive
   const totalFar = Number(baseFar) + bonusFar;
@@ -247,10 +246,10 @@ function SimulatorTab() {
               <span>Plot Area</span>
               <span className="text-indigo-600">{plotArea.toLocaleString()} sq. meters</span>
             </label>
-            <input 
-              type="range" 
+            <input
+              type="range"
               min="1500" max="10000" step="100"
-              value={plotArea} 
+              value={plotArea}
               onChange={(e) => setPlotArea(Number(e.target.value))}
               className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
             />
@@ -262,10 +261,10 @@ function SimulatorTab() {
               <span>Current Base FAR</span>
               <span className="text-indigo-600">{baseFar.toFixed(1)}</span>
             </label>
-            <input 
-              type="range" 
+            <input
+              type="range"
               min="1.0" max="3.0" step="0.1"
-              value={baseFar} 
+              value={baseFar}
               onChange={(e) => setBaseFar(Number(e.target.value))}
               className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
             />
@@ -273,12 +272,12 @@ function SimulatorTab() {
 
           <div className="bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
             <h4 className="font-bold text-indigo-900 mb-3 flex items-center">
-              <ShieldCheck className="w-5 h-5 mr-2"/> Applied Policy Perks:
+              <ShieldCheck className="w-5 h-5 mr-2" /> Applied Policy Perks:
             </h4>
             <ul className="text-sm text-indigo-800 space-y-2 font-medium">
-              <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2"/> +1.0 Free Additional FAR (Section 9.6)</li>
-              <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2"/> 5% Extra Commercial Use Area (Section 9.7)</li>
-              <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2"/> Amalgamation Fee Waived (Section 9.3)</li>
+              <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2" /> +1.0 Free Additional FAR (Section 9.6)</li>
+              <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2" /> 5% Extra Commercial Use Area (Section 9.7)</li>
+              <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2" /> Amalgamation Fee Waived (Section 9.3)</li>
             </ul>
           </div>
         </div>
@@ -296,12 +295,12 @@ function SimulatorTab() {
           <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
             <p className="text-sm font-bold text-slate-700 mb-6 text-center uppercase tracking-wider">Volume Comparison</p>
             <div className="h-40 flex items-end justify-center space-x-8 border-b-2 border-slate-200 pb-2">
-               <div className="w-24 bg-slate-300 rounded-t-xl transition-all duration-500 relative flex items-end justify-center pb-3 text-sm font-bold text-slate-600 shadow-inner" style={{height: `${(oldBuiltUpArea / newBuiltUpArea) * 100}%`}}>
-                  Before
-               </div>
-               <div className="w-24 bg-gradient-to-t from-indigo-600 to-blue-500 rounded-t-xl transition-all duration-500 relative flex items-end justify-center pb-3 text-sm font-bold text-white shadow-xl" style={{height: '100%'}}>
-                  After
-               </div>
+              <div className="w-24 bg-slate-300 rounded-t-xl transition-all duration-500 relative flex items-end justify-center pb-3 text-sm font-bold text-slate-600 shadow-inner" style={{ height: `${(oldBuiltUpArea / newBuiltUpArea) * 100}%` }}>
+                Before
+              </div>
+              <div className="w-24 bg-gradient-to-t from-indigo-600 to-blue-500 rounded-t-xl transition-all duration-500 relative flex items-end justify-center pb-3 text-sm font-bold text-white shadow-xl" style={{ height: '100%' }}>
+                After
+              </div>
             </div>
           </div>
         </div>
@@ -336,6 +335,13 @@ function FullPolicyEnglishTab() {
     <div className="max-w-4xl mx-auto animate-fadeIn">
       {/* Action Bar */}
       <div className="flex justify-end mb-4 space-x-4">
+        <a
+          href="/UP_Redevelopment_Policy_2026.pdf"
+          download="UP_Redevelopment_Policy_2026.pdf"
+          className="flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          <Download className="w-4 h-4 mr-2" /> Download Original PDF
+        </a>
         <button onClick={() => window.print()} className="flex items-center text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">
           <Printer className="w-4 h-4 mr-2" /> Print
         </button>
@@ -356,11 +362,11 @@ function FullPolicyEnglishTab() {
 
         <div className="mb-8">
           <p className="font-bold">From,</p>
-          <p className="ml-4">P. Guruprasad<br/>Principal Secretary,<br/>Government of Uttar Pradesh.</p>
+          <p className="ml-4">P. Guruprasad<br />Principal Secretary,<br />Government of Uttar Pradesh.</p>
           <p className="font-bold mt-4">To,</p>
           <ol className="list-decimal ml-8">
-            <li>Housing Commissioner,<br/>U.P. Housing and Development Board, Lucknow.</li>
-            <li className="mt-2">Vice Chairman,<br/>All Development Authorities, Uttar Pradesh.</li>
+            <li>Housing Commissioner,<br />U.P. Housing and Development Board, Lucknow.</li>
+            <li className="mt-2">Vice Chairman,<br />All Development Authorities, Uttar Pradesh.</li>
           </ol>
         </div>
 
@@ -381,8 +387,8 @@ function FullPolicyEnglishTab() {
 
         <SectionTitle>1. Eligibility for Redevelopment Scheme:</SectionTitle>
         <List>
-          <li><strong>1.1</strong> All types of public and private sector schemes that are a minimum of 25 years old or have been granted permission for redevelopment by the Government Agency based on a &apos;Structural Audit&apos; report.<br/>
-          <span className="block mt-2 text-sm bg-blue-50 p-2 border-l-2 border-blue-400"><em>Explanation: &apos;Government Agency&apos; implies the agency within whose jurisdiction the redevelopment scheme is located.</em></span>
+          <li><strong>1.1</strong> All types of public and private sector schemes that are a minimum of 25 years old or have been granted permission for redevelopment by the Government Agency based on a &apos;Structural Audit&apos; report.<br />
+            <span className="block mt-2 text-sm bg-blue-50 p-2 border-l-2 border-blue-400"><em>Explanation: &apos;Government Agency&apos; implies the agency within whose jurisdiction the redevelopment scheme is located.</em></span>
           </li>
           <li><strong>1.2</strong> Schemes of a Housing Society or Apartment Owners Association (AOA) that are a minimum of 25 years old and where a registered Housing Society, Apartment Owners Association, or other &apos;Legal Entity&apos; has already been constituted.</li>
           <li><strong>1.3</strong> The minimum land area for a redevelopment scheme shall be 1500 square meters.</li>
@@ -549,7 +555,7 @@ function FullPolicyEnglishTab() {
         <div className="mt-12 text-right">
           <p className="font-bold">Yours faithfully,</p>
           <div className="mt-4 inline-block text-left">
-            <p className="text-sm italic text-slate-500 border border-slate-300 px-2 py-1 bg-slate-50 rounded">Digitally signed by<br/>GURU PRASAD PORALA<br/>10:37:51 (2026)</p>
+            <p className="text-sm italic text-slate-500 border border-slate-300 px-2 py-1 bg-slate-50 rounded">Digitally signed by<br />GURU PRASAD PORALA<br />10:37:51 (2026)</p>
             <p className="font-bold mt-2">Principal Secretary.</p>
           </div>
         </div>
@@ -575,7 +581,7 @@ function FullPolicyEnglishTab() {
             <li>All Sections, Housing and Urban Planning Department, Government of U.P.</li>
             <li>Guard File.</li>
           </List>
-          
+
           <div className="mt-8 text-right">
             <p className="font-bold">By Order,</p>
             <p className="font-bold mt-4">P. Guruprasad</p>
@@ -594,6 +600,13 @@ function FullPolicyHindiTab() {
     <div className="max-w-4xl mx-auto animate-fadeIn">
       {/* Action Bar */}
       <div className="flex justify-end mb-4 space-x-4">
+        <a
+          href="/UP_Redevelopment_Policy_2026.pdf"
+          download="UP_Redevelopment_Policy_2026.pdf"
+          className="flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          <Download className="w-4 h-4 mr-2" /> मूल पीडीएफ डाउनलोड करें
+        </a>
         <button onClick={() => window.print()} className="flex items-center text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">
           <Printer className="w-4 h-4 mr-2" /> प्रिंट
         </button>
@@ -614,11 +627,11 @@ function FullPolicyHindiTab() {
 
         <div className="mb-8">
           <p className="font-bold">प्रेषक,</p>
-          <p className="ml-4">पी० गुरूप्रसाद<br/>प्रमुख सचिव,<br/>उत्तर प्रदेश शासन।</p>
+          <p className="ml-4">पी० गुरूप्रसाद<br />प्रमुख सचिव,<br />उत्तर प्रदेश शासन।</p>
           <p className="font-bold mt-4">सेवा में,</p>
           <ol className="list-decimal ml-8">
-            <li>आवास आयुक्त,<br/>उ०प्र० आवास एवं विकास परिषद, लखनऊ।</li>
-            <li className="mt-2">उपाध्यक्ष,<br/>समस्त विकास प्राधिकरण, उत्तर प्रदेश।</li>
+            <li>आवास आयुक्त,<br />उ०प्र० आवास एवं विकास परिषद, लखनऊ।</li>
+            <li className="mt-2">उपाध्यक्ष,<br />समस्त विकास प्राधिकरण, उत्तर प्रदेश।</li>
           </ol>
         </div>
 
@@ -639,8 +652,8 @@ function FullPolicyHindiTab() {
 
         <SectionTitle>1. पुनर्विकास योजना हेतु पात्रताः</SectionTitle>
         <List>
-          <li><strong>1.1</strong> सार्वजनिक एवं निजी क्षेत्र की समस्त प्रकार की योजनाएं, जो न्यूनतम 25 वर्ष पुरानी हों अथवा &apos;स्ट्रक्चरल ऑडिट&apos; की रिपोर्ट के आधार पर पुनर्विकास हेतु शासकीय अभिकरण द्वारा अनुमति प्रदान की गयी हो।<br/>
-          <span className="block mt-2 text-sm bg-blue-50 p-2 border-l-2 border-blue-400"><em>स्पष्टीकरणः शासकीय अभिकरण का तात्पर्य उस अभिकरण से है, जिसके अधिकार क्षेत्र में पुनर्विकास योजना स्थित है।</em></span>
+          <li><strong>1.1</strong> सार्वजनिक एवं निजी क्षेत्र की समस्त प्रकार की योजनाएं, जो न्यूनतम 25 वर्ष पुरानी हों अथवा &apos;स्ट्रक्चरल ऑडिट&apos; की रिपोर्ट के आधार पर पुनर्विकास हेतु शासकीय अभिकरण द्वारा अनुमति प्रदान की गयी हो।<br />
+            <span className="block mt-2 text-sm bg-blue-50 p-2 border-l-2 border-blue-400"><em>स्पष्टीकरणः शासकीय अभिकरण का तात्पर्य उस अभिकरण से है, जिसके अधिकार क्षेत्र में पुनर्विकास योजना स्थित है।</em></span>
           </li>
           <li><strong>1.2</strong> हाउसिंग सोसायटी अथवा अपार्टमेन्ट ऑनर्स एसोसिएशन की योजना, जो न्यूनतम 25 वर्ष पुरानी हो और जहां पंजीकृत हाउसिंग सोसायटी अथवा अपार्टमेन्ट ऑनर्स एसोसिएशन अथवा अन्य &apos;लीगल इन्टिटी&apos; का गठन हो चुका हो।</li>
           <li><strong>1.3</strong> पुनर्विकास योजना हेतु भूमि का न्यूनतम क्षेत्रफल 1500 वर्ग मीटर होगा।</li>
@@ -807,7 +820,7 @@ function FullPolicyHindiTab() {
         <div className="mt-12 text-right">
           <p className="font-bold">भवदीय,</p>
           <div className="mt-4 inline-block text-left">
-            <p className="text-sm italic text-slate-500 border border-slate-300 px-2 py-1 bg-slate-50 rounded">Digitally signed by<br/>GURU PRASAD PORALA<br/>10:37:51 (2026)</p>
+            <p className="text-sm italic text-slate-500 border border-slate-300 px-2 py-1 bg-slate-50 rounded">Digitally signed by<br />GURU PRASAD PORALA<br />10:37:51 (2026)</p>
             <p className="font-bold mt-2">प्रमुख सचिव।</p>
           </div>
         </div>
@@ -833,7 +846,7 @@ function FullPolicyHindiTab() {
             <li>समस्त अनुभाग, आवास एवं शहरी नियोजन विभाग, उ०प्र० शासन।</li>
             <li>गार्ड फाईल ।</li>
           </List>
-          
+
           <div className="mt-8 text-right">
             <p className="font-bold">आज्ञा से,</p>
             <p className="font-bold mt-4">पी० गुरूप्रसाद</p>
@@ -909,7 +922,7 @@ function CityAnimation() {
     <div className="w-72 h-72 bg-gradient-to-t from-slate-200 to-blue-50 rounded-full border-8 border-white shadow-2xl flex items-end justify-center p-8 relative overflow-hidden">
       {/* Sun/Moon */}
       <div className="absolute top-8 right-8 w-10 h-10 rounded-full bg-amber-400 shadow-[0_0_30px_rgba(251,191,36,0.8)]"></div>
-      
+
       {/* Old Buildings */}
       <div className={`absolute bottom-8 flex items-end space-x-3 transition-all duration-1000 ${stage === 1 ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
         <div className="w-12 h-20 bg-slate-400 rounded-sm shadow-inner flex flex-col justify-end p-1 space-y-1 opacity-80"><div className="w-full h-2 bg-slate-500 rounded"></div></div>
@@ -920,7 +933,7 @@ function CityAnimation() {
       {/* New Buildings (Redeveloped) */}
       <div className={`absolute bottom-8 flex items-end space-x-3 transition-all duration-1000 delay-300 ${stage === 0 ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}`}>
         <div className="w-14 h-32 bg-blue-500 rounded-t-lg shadow-lg relative overflow-hidden">
-           <div className="absolute top-2 left-2 right-2 h-4 bg-blue-300 rounded opacity-50"></div>
+          <div className="absolute top-2 left-2 right-2 h-4 bg-blue-300 rounded opacity-50"></div>
         </div>
         <div className="w-20 h-44 bg-indigo-600 rounded-t-lg shadow-2xl relative overflow-hidden border-t-4 border-indigo-400">
           <div className="absolute top-3 left-3 w-4 h-4 bg-indigo-300 rounded-sm opacity-60"></div>
@@ -929,7 +942,7 @@ function CityAnimation() {
           <div className="absolute top-10 right-3 w-4 h-4 bg-indigo-300 rounded-sm opacity-60"></div>
         </div>
         <div className="w-12 h-28 bg-emerald-500 rounded-t-lg shadow-lg relative flex justify-center">
-            <Trees className="w-6 h-6 text-white absolute top-4 opacity-80" />
+          <Trees className="w-6 h-6 text-white absolute top-4 opacity-80" />
         </div>
       </div>
 
