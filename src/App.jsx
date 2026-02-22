@@ -837,7 +837,7 @@ function FullPolicyHindiTab() {
           <div className="mt-8 text-right">
             <p className="font-bold">आज्ञा से,</p>
             <p className="font-bold mt-4">पी० गुरूप्रसाद</p>
-            <p className="font-bold mt-4">प्रमुख सचिव।</p>
+            <p>प्रमुख सचिव।</p>
           </div>
         </div>
 
