@@ -1,16 +1,56 @@
-# React + Vite
+# UP Redevelopment Policy 2026 - Interactive Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web portal and FAR (Floor Area Ratio) simulator for the **Uttar Pradesh Urban Redevelopment Policy 2026**. This application transforms the dense policy document into an engaging, user-friendly digital experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📊 **Policy Insights**: High-level summaries, key figures, and financial exemptions highlighted visually.
+- 🧮 **FAR Simulator**: Interactive calculator to visualize the physical benefits of redevelopment (e.g., increased built-up area and commercial allowance) based on plot size and base FAR.
+- 📄 **Full Policy Documents**: Complete official policy text available in both English and Hindi for reference and printing.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18**
+- **Vite** (for fast build tooling)
+- **Tailwind CSS v4** (Utility-first CSS styling)
+- **Lucide React** (Beautiful, consistent icons)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+Ensure you have Node.js and npm installed on your system.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vjspab/up-redevelopment-policy.git
+   cd up-redevelopment-policy
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## Deployment
+
+This application is ready to be deployed to Vercel (or any other standard static hosting provider). It is structured as a standard Vite application:
+
+```bash
+npm run build
+```
+
+This will output the static files to the `dist/` directory.
+
+## License
+
+This project is created for public information and simulation regarding the UP Urban Redevelopment Policy 2026.

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Interactive portal and FAR simulator for the UP Urban Redevelopment Policy 2026.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
